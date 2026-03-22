@@ -16,10 +16,15 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
+
+h2{
+    width: 100%;
+    font-size: 19px;
+}
 .corps{
     display: block;
     flex-direction: column;
-    background: rgb(66, 30, 70);
+    background: rgb(136, 77, 142);
     padding: 50px;
     margin: 50px;
     align-items: center;
