@@ -19,7 +19,7 @@ body{
 .corps{
     display: block;
     flex-direction: column;
-    background: rgb(197, 242, 255);
+    background: rgb(66, 30, 70);
     padding: 50px;
     margin: 50px;
     align-items: center;
@@ -29,10 +29,11 @@ body{
 
 .corps img{
     margin: 20px;
-    
     border-radius: 50px;
     border: 10px solid;
     border-color: rgb(60, 2, 87);
+    width: 300px;
+    height: 300px;
 }
 
 .corps img:hover{
@@ -60,14 +61,13 @@ body{
 }
 
 .corps a{
-    font-size: 18px;
+    font-size: 15px;
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-top: 10px;
     padding: 10px;
     text-decoration: none;
-    border: 10px;
 }
 
 .corps a:hover{
@@ -77,3 +77,28 @@ body{
     color: white;
 }
 
+
+@media screen {
+    body{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    padding: 5px;
+    text-align: center;
+    background-image: url(cdv1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    
+    .corps{
+        width: 60%;
+
+    }
+
+    .corps img{
+        width: 150px;
+        height: 150px;
+    }
+}
