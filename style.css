@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    background-image: url(cdv1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.corps{
+    display: block;
+    flex-direction: column;
+    background: rgb(197, 242, 255);
+    padding: 50px;
+    margin: 50px;
+    align-items: center;
+    border: 5px solid rgb(60, 2, 87);
+    border-radius: 20px;
+}
+
+.corps img{
+    margin: 20px;
+    
+    border-radius: 50px;
+    border: 10px solid;
+    border-color: rgb(60, 2, 87);
+}
+
+.corps img:hover{
+    rotate: calc(90deg);
+}
+
+.corps button {
+    border-width: 10px;
+    border-color: rgb(60, 2, 87);
+    border-radius: 20px;
+    width: 80%;
+    margin: 10px;
+    padding: 2px;
+    text-align: center;
+    background: rgb(195, 244, 195);
+}
+
+.corps button:hover{
+    background: black;
+    transition: 0.3s;
+    color: white;
+    rotate: calc(10deg);
+
+
+}
+
+.corps a{
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    text-decoration: none;
+    border: 10px;
+}
+
+.corps a:hover{
+    margin: 5px;
+    padding: 5px;
+    background: rgb(86, 78, 78);
+    color: white;
+}
+
