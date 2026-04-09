@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mon Parcours</title>
+
+<style>
+
+/* ===== BASE ===== */
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f5f7fb;
+}
+
+h2{
+text-align:center;
+padding:40px;
+}
+
+/* ===== TIMELINE ===== */
+.timeline{
+position:relative;
+max-width:1000px;
+margin:auto;
+}
+
+/* ligne */
+.timeline-line{
+position:absolute;
+width:4px;
+background:#2b7cff;
+top:0;
+left:50%;
+transform:translateX(-50%);
+height:0;
+}
+
+/* container */
+.container{
+position:relative;
+width:50%;
+padding:20px 40px;
+opacity:0;
+transition:0.6s;
+}
+
+/* gauche droite */
+.container.left{
+left:0;
+transform:translateX(-100px);
+}
+
+.container.right{
+left:50%;
+transform:translateX(100px);
+}
+
+/* quand visible */
+.container.show{
+opacity:1;
+transform:translateX(0);
+}
+
+/* contenu */
+.content{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.content:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* image + texte */
+.box{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.timeline-img{
+width:120px;
+height:120px;
+object-fit:cover;
+border-radius:10px;
+transition:0.3s;
+}
+
+.timeline-img:hover{
+transform:scale(1.1);
+}
+
+/* date */
+.content::after{
+content:attr(data-date);
+position:absolute;
+top:20px;
+width:60px;
+height:60px;
+background:#2b7cff;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:12px;
+font-weight:bold;
+}
+
+/* position date */
+.container.left .content::after{
+right:-90px;
+}
+
+.container.right .content::after{
+left:-90px;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+
+.timeline-line{
+left:20px;
+}
+
+.container{
+width:100%;
+padding-left:70px;
+left:0 !important;
+transform:translateX(0);
+}
+
+.box{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.timeline-img{
+width:100%;
+height:auto;
+}
+
+.content::after{
+left:-50px !important;
+}
+
+}
+
+/* smooth */
+html{
+scroll-behavior:smooth;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Mon parcours</h2>
+
+<div class="timeline">
+
+<div class="timeline-line" id="line"></div>
+
+<!-- BAC -->
+<div class="container left">
+<div class="content" data-date="2018">
+<div class="box">
+<img src="bac.jpg" class="timeline-img">
+<div>
+<h3>Baccalauréat Série C</h3>
+<p>Formation scientifique développant logique et rigueur.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- BTS -->
+<div class="container right">
+<div class="content" data-date="2021">
+<div class="box">
+<img src="bts.jpg" class="timeline-img">
+<div>
+<h3>BTS – ESC Castaing</h3>
+<p>Formation en informatique et conception d’applications.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="container left">
+<div class="content" data-date="2022">
+<div class="box">
+<img src="impact.jpg" class="timeline-img">
+<div>
+<h3>Infographe & Monteur vidéo</h3>
+<p>Création de contenus visuels et digitaux.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- PROJET -->
+<div class="container right">
+<div class="content" data-date="2023">
+<div class="box">
+<img src="ivoiredestock.jpg" class="timeline-img">
+<div>
+<h3>Projet IvoireDestock</h3>
+<p>Développement d’une solution de déstockage alimentaire.</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+
+/* ===== ANIMATION BLOCS ===== */
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+},{threshold:0.2});
+
+document.querySelectorAll(".container").forEach(el=>{
+observer.observe(el);
+});
+
+/* ===== LIGNE ===== */
+const line = document.getElementById("line");
+
+window.addEventListener("scroll",()=>{
+
+const timeline = document.querySelector(".timeline");
+const rect = timeline.getBoundingClientRect();
+let windowHeight = window.innerHeight;
+
+let progress = (windowHeight - rect.top) / rect.height;
+progress = Math.max(0, Math.min(1, progress));
+
+line.style.height = (progress * 100) + "%";
+
+});
+
+</script>
+
+</body>
+</html> 

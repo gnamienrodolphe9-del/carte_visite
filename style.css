@@ -60,9 +60,7 @@ h2{
     background: black;
     transition: 0.3s;
     color: white;
-    rotate: calc(10deg);
-
-
+    
 }
 
 .corps a{
@@ -75,12 +73,12 @@ h2{
     text-decoration: none;
 }
 
-.corps a:hover{
+/*.corps a:hover{
     margin: 5px;
     padding: 5px;
     background: rgb(86, 78, 78);
     color: white;
-}
+}*/
 
 
 @media screen {
