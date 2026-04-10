@@ -153,11 +153,11 @@ padding: 100px;
 margin: 40px auto;
 gap:20px;
 border-radius: 10px;
-flex-wrap:wrap;
+/*flex-wrap:wrap;
 background: rgba(253, 253, 254, 0.046); 
 border: 1px solid rgba(255, 255, 255, 0.2); 
 backdrop-filter: blur(20px);
-box-shadow: 0 0 20px rgba(9, 9, 99, 0.9);
+box-shadow: 0 0 20px rgba(9, 9, 99, 0.9);*/
 } 
 
 .skill{
@@ -165,13 +165,17 @@ background: rgba(13, 3, 129, 0.1);
 border: 1px solid rgba(255,255,255,0.2); 
 backdrop-filter: blur(10px);
 box-shadow: 0 0 20px rgba(9, 9, 99, 0.5);
-margin: 20px;
-padding:25px;
+margin: 10px;
+padding:10px;
 border-radius:10px;
 box-shadow:0 5px 10px rgba(0,0,0,0.1);
 color: var(--text);
-width: 50%;
+width: 150px;
+height: 150px;
 text-align:center;
+justify-content: center;
+display: flex;
+flex-direction: column;
 }
 
 /*Mes projets*/
@@ -213,6 +217,12 @@ backdrop-filter: blur(20px);
 box-shadow: 0 0 20px rgba(9, 9, 99, 0.9);
 }
 
+.carte p{
+font-size:16px;
+line-height:1.3;
+text-align: justify;
+}
+ 
 .carte h3{
 color: var(--primary);
 margin: 10px 0;
@@ -298,6 +308,12 @@ box-shadow:0 15px 35px rgba(3, 201, 236, 0.7);
 display:flex;
 align-items:center;
 gap:20px;
+}
+
+.text P{
+font-size:16px;
+line-height:1.3;
+text-align: justify;
 }
 
 /* image */
@@ -474,6 +490,7 @@ transform: scale(1.2) rotateZ(0deg);
 .apropos{
 flex-direction:column;
 gap:20px;
+text-align: justify;
 }
 
 /* SKILLS */
@@ -495,6 +512,17 @@ gap:20px;
 padding:10px;
 }
 
+.carte{
+width:120%;
+margin:auto;
+
+}
+
+.carte p{
+font-size:16px;
+text-align: justify;
+}
+
 .carte img{
 width:100%;
 height:auto;
@@ -506,7 +534,8 @@ left:20px;
 }
 
 .container{
-width:100%;
+width:500px;
+height: auto;
 left:0 !important;
 padding-left:60px;
 margin:20px 0;
@@ -518,8 +547,15 @@ align-items:flex-start;
 }
 
 .timeline-img{
-width:1000px%;
+width:150px;
 height:auto;
+}
+
+.text p{
+width:100%;
+font-size: 15px;
+text-align: justify;
+
 }
 
 .content::after{
