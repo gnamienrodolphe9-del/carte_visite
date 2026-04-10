@@ -19,6 +19,19 @@ localStorage.setItem("theme","light");
 }
 };
 
+
+// On récupère les éléments HTML
+const burger = document.getElementById("burger");
+const nav = document.getElementById("nav");
+
+// Quand on clique sur le burger
+burger.addEventListener("click", function() {
+
+  // Ajoute ou enlève la classe "active"
+nav.classList.toggle("active");
+
+});
+
 /* ANIMATION SCROLL */
 const containers = document.querySelectorAll(".container");
 const line = document.getElementById("line");

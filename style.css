@@ -19,16 +19,16 @@ body{
 
 h2{
     width: 100%;
-    font-size: 19px;
+    font-size: 90px;
 }
 .corps{
     display: block;
     flex-direction: column;
-    background: rgb(136, 77, 142);
+    background: rgb(144, 230, 249);
     padding: 50px;
     margin: 50px;
     align-items: center;
-    border: 5px solid rgb(60, 2, 87);
+    border: 5px solid rgb(88, 2, 128);
     border-radius: 20px;
 }
 
@@ -42,7 +42,7 @@ h2{
 }
 
 .corps img:hover{
-    rotate: calc(90deg);
+    transform: scale(1.2) rotateZ(0deg)
 }
 
 .corps button {
@@ -53,14 +53,14 @@ h2{
     margin: 10px;
     padding: 2px;
     text-align: center;
-    background: rgb(195, 244, 195);
+    background: rgb(8, 224, 253);
 }
 
 .corps button:hover{
     background: black;
     transition: 0.3s;
     color: white;
-    
+    transform: scale(1.2) rotateZ(0deg)
 }
 
 .corps a{
@@ -97,7 +97,7 @@ h2{
     
     h2{
         width: 100%;
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .corps{
@@ -109,4 +109,18 @@ h2{
         width: 150px;
         height: 150px;
     }
+
+    .corps button {
+        width: 70%;
+        font-size: 10px;
+    }
+
+    .corps a{
+        font-size: 14px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
 }

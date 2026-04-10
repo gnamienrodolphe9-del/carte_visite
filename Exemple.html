@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<!---<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -169,7 +169,7 @@ scroll-behavior:smooth;
 
 <div class="timeline-line" id="line"></div>
 
-<!-- BAC -->
+<!-- BAC --
 <div class="container left">
 <div class="content" data-date="2018">
 <div class="box">
@@ -182,7 +182,7 @@ scroll-behavior:smooth;
 </div>
 </div>
 
-<!-- BTS -->
+<!-- BTS --
 <div class="container right">
 <div class="content" data-date="2021">
 <div class="box">
@@ -195,7 +195,7 @@ scroll-behavior:smooth;
 </div>
 </div>
 
-<!-- EXPERIENCE -->
+<!-- EXPERIENCE --
 <div class="container left">
 <div class="content" data-date="2022">
 <div class="box">
@@ -208,7 +208,7 @@ scroll-behavior:smooth;
 </div>
 </div>
 
-<!-- PROJET -->
+<!-- PROJET --
 <div class="container right">
 <div class="content" data-date="2023">
 <div class="box">
@@ -257,4 +257,117 @@ line.style.height = (progress * 100) + "%";
 </script>
 
 </body>
-</html> 
+ </html> -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Menu Burger</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#2b7cff;
+  color:white;
+  padding:15px;
+}
+
+/* MENU NORMAL */
+nav{
+  display:flex;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
+}
+
+/* BURGER */
+.burger{
+  display:none;
+  cursor:pointer;
+}
+
+.burger div{
+  width:25px;
+  height:3px;
+  background:white;
+  margin:5px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  nav{
+    position:absolute;
+    top:60px;
+    left:0;
+    width:100%;
+    background:#2b7cff;
+    flex-direction:column;
+    text-align:center;
+
+    display:none; /* caché au départ */
+  }
+
+  nav.active{
+    display:flex; /* affiché quand on clique */
+  }
+
+  .burger{
+    display:block;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>MonSite</h2>
+
+  <nav id="menu">
+    <a href="#">Accueil</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="burger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+</header>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
