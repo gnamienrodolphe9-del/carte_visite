@@ -124,7 +124,7 @@ align-items:center;
 justify-content:justify;
 gap:100px;
 padding:20px;
-width: 85%;
+width: 100%;
 margin: 20px auto;
 border-radius: 10px;
 transition:0.7s ease;
@@ -134,10 +134,18 @@ backdrop-filter: blur(20px);
 box-shadow: 0 0 20px rgba(9, 9, 99, 0.9);
 }
 
+.apropos p{
+font-size:18px;
+line-height:1.3;
+justify-content: justify;
+width: 100%;
+
+}
+
 
 .skills{ 
 color: #021b4e;
-width: 80%;
+width: 100%;
 display:flex;
 justify-content:center;
 align-items: center;
@@ -162,6 +170,8 @@ padding:25px;
 border-radius:10px;
 box-shadow:0 5px 10px rgba(0,0,0,0.1);
 color: var(--text);
+width: 50%;
+text-align:center;
 }
 
 /*Mes projets*/
@@ -183,6 +193,7 @@ background: rgba(253, 253, 254, 0.046);
 border: 1px solid rgba(255, 255, 255, 0.5); 
 backdrop-filter: blur(20px);
 box-shadow: 0 0 20px rgba(9, 9, 99, 0.9);
+width: 100%;
 
 }
 
@@ -460,6 +471,11 @@ width:200px;
 transform: scale(1.2) rotateZ(0deg);
 }
 
+.apropos{
+flex-direction:column;
+gap:20px;
+}
+
 /* SKILLS */
 .skills{
 flex-direction:column;
@@ -496,12 +512,14 @@ padding-left:60px;
 margin:20px 0;
 }
 
-
-
+.box{
+flex-direction:column;
+align-items:flex-start;
+}
 
 .timeline-img{
-width:200px;
-height:200px;
+width:1000px%;
+height:auto;
 }
 
 .content::after{
