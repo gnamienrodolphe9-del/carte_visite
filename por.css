@@ -10,13 +10,15 @@ box-sizing:border-box;
 --primary:#2b7cff;
 --bg:#e3f5f4;
 --text:#222;
+--card: RGBA(255, 255, 255, 0.1);
 }
 
 /* DARK MODE */
 .dark-mode{
 --bg:#031d55;
 --text:#0ef0f0;
-
+background: #021b4e;
+color: rgb(144, 230, 249);
 }
 
 body{
@@ -44,10 +46,10 @@ font-weight:bold;
 }
 
 /* mode sombre */
-.dark-mode{
+/* .dark-mode{
 background: #021b4e;
 color: rgb(144, 230, 249);
-}
+} */
 
 /* bouton */
 #theme-btn{
@@ -115,15 +117,34 @@ padding:50px;
 border: 20px;
 }
 
+.apropos{
+display:flex;
+text-align: center;
+align-items:center;
+justify-content:justify;
+gap:100px;
+padding:20px;
+width: 85%;
+margin: 20px auto;
+border-radius: 10px;
+transition:0.7s ease;
+background: rgba(253, 253, 254, 0.046); 
+border: 1px solid rgba(255, 255, 255, 0.5); 
+backdrop-filter: blur(20px);
+box-shadow: 0 0 20px rgba(9, 9, 99, 0.9);
+}
+
 
 .skills{ 
 color: #021b4e;
-width: 80% auto;
+width: 80%;
 display:flex;
 justify-content:center;
 align-items: center;
-padding: 100px auto;
+padding: 100px;
+margin: 40px auto;
 gap:20px;
+border-radius: 10px;
 flex-wrap:wrap;
 background: rgba(253, 253, 254, 0.046); 
 border: 1px solid rgba(255, 255, 255, 0.2); 
@@ -143,16 +164,16 @@ box-shadow:0 5px 10px rgba(0,0,0,0.1);
 color: var(--text);
 }
 
+/*Mes projets*/
 
 .projets{
-display:grid;
-grid-template-columns:repeat(3,1fr);
+display:flex; 
+justify-content: center;
 gap:40px;
-max-width:1000px;
+max-width: 1000px;
 margin:auto;
 }
 
-/*Mes projets*/
 .carte{
 padding:20px;
 border-radius:10px;
@@ -246,11 +267,11 @@ left:50%;
 
 /* contenu */
 .content{
+text-align: center;
 background: var(--card);
 margin: 2px;
 border-radius:5px;
-/*box-shadow:0 10px 25px rgba(211, 65, 65, 0.1);*/
-
+box-shadow:0 10px 25px rgba(211, 65, 65, 0.1);
 position: relative;
 transition:0.3s;
 }
@@ -270,8 +291,8 @@ gap:20px;
 
 /* image */
 .timeline-img{
-width:200px;
-height:200px;
+width:150px;
+height:150px;
 object-fit:cover;
 border-radius:10px;
 flex-shrink:0;
@@ -338,20 +359,20 @@ border-radius:6px;
 border: 2px solid #1bfafa;
 }
 
-button{
+button{ 
 background: var(--bg);
 color: var(--text);
 padding:12px;
 border:none;
 border-radius:6px;
-border: 2px solid #1bfafa;
+border: 2px solid #1bfafa; 
 transition:0.7s ease;
 background: rgba(13, 3, 129, 0.1); 
 border: 1px solid rgba(255,255,255,0.2); 
 backdrop-filter: blur(10px);
 box-shadow: 0 0 20px rgba(9, 9, 99, 0.5);
 
-}
+ } 
 
 .btn2 button {
     margin: 20px;
@@ -389,112 +410,129 @@ padding:20px;
 margin-top:40px;
 }
 
-@media (max-width:768px){
 
-.hero{
-flex-direction:column; 
-text-align:center;
-padding: 20px;
-margin: 20px;
+/*================ RESPONSIVE ================= */
+
+@media screen and (max-width:768px){
+
+/* GENERAL */
+body{
+font-size:14px;
 }
 
-.hero h1{
-    padding: 5px;
-    width: 100%;
-    font-size: 20px;
-}
-
-.hero img{
-width: 200px;
-opacity: 0;
-transform: translate(30px);
-transition: 0.8s ease;
-}
-
-.projets{
-grid-template-columns:1fr;
-}
-.carte img{
-width: 300px;
-height:250px;
-object-fit:cover;
-opacity: 0;
-transform: translate(30px);
-transition: 0.8s ease;
-
-}
-
-.carte img.visible{
-    opacity: 1;
-    transform: translate(0);
-}
-
+/* HEADER */
 header{
 flex-direction:column;
+text-align:center;
 gap:10px;
 }
 
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
 nav a{
-
+margin:1px;
+font-size:14px;
 }
 
-}
-
-section{
-animation:fade 1s ease;
-}
-
-@keyframes fade{
-
-from{
-opacity:0;
-transform:translateY(30px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-
-/* ================= MOBILE ================= */
-@media screen and (max-width:768px){
-
-/* ligne à gauche */
-.timeline::after{
-left:20px;
-}
-
-/* blocs */
-.container{
-width:100%;
-/*padding-left:70px;
-padding-right:20px;*/
-left:0 !important;
-}
-
-/* image au-dessus */
-.box{
+/* HERO */
+.hero{
 flex-direction:column;
-align-items:flex-start;
+padding:20px;
+margin:10px;
+gap:20px;
+width:95%;
 }
 
-/* image responsive */
-.timeline-img{
-width:50%;
+.hero h1{
+font-size:22px;
+}
+
+.photo{
+width:200px;
+}
+
+/* enlever effet trop violent mobile */
+.photo:hover{
+transform: scale(1.2) rotateZ(0deg);
+}
+
+/* SKILLS */
+.skills{
+flex-direction:column;
+padding:20px;
+}
+
+.skill{
+width:90%;
+margin:auto;
+font-size: 16px;
+}
+
+/* PROJETS */
+.projets{
+flex-direction:column;
+gap:20px;
+padding:10px;
+}
+
+.carte img{
+width:100%;
 height:auto;
 }
 
-/* cercle */
-.content::after{
-left:-50px !important;
-right:auto;
-width:50px;
-height:50px;
-font-size:11px;
+/* TIMELINE */
+.timeline-line{
+left:20px;
 }
 
+.container{
+width:100%;
+left:0 !important;
+padding-left:60px;
+margin:20px 0;
+}
+
+
+
+
+.timeline-img{
+width:200px;
+height:200px;
+}
+
+.content::after{
+left:-40px !important;
+right:auto;
+width:45px;
+height:45px;
+font-size:10px;
+}
+
+h2{
+font-size: 35px;
+}
+
+P{
+font-size: 16px;
+
+}
+
+/* FORM */
+form{
+width:90%;
+}
+
+input, textarea{
+font-size:14px;
+}
+
+/* FOOTER */
+footer{
+font-size:14px;
+}
 
 }
