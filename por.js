@@ -92,10 +92,11 @@ const observer = new IntersectionObserver((entries) => {
 reveals.forEach(el => observer.observe(el));
 
 const texts = [
-    "Développeur Full Stack",
-    "Infographiste",
-    "Monteur Vidéo",
+    "Full-Stack Developer",
     "UI/UX Designer",
+    "Infographe",
+    "Monteur Vidéo",
+    
 ];
 
 let index = 0;   // Index du texte actuel mmot actuel dans le tableau
