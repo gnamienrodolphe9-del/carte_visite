@@ -168,7 +168,7 @@ padding:10px ;
 background:white;
 }
 .logo {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 /* Menu normal */
@@ -243,6 +243,35 @@ border: 1px solid rgba(255, 255, 255, 0.5);
 backdrop-filter: blur(20px);
 box-shadow: 0 0 20px rgba(9, 9, 99, 0.9);
 }
+
+.logos{
+  display: flex;
+  color: #01d6d6;
+  padding: 0px;
+}
+
+.typing{
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  font-weight: bold;
+  color: var(--primary);
+  display: flex;
+}
+
+/* Curseur qui clignote */
+
+.typing::after {
+  content: '|';
+  margin-left: 5px;
+  animation: blink 1s step-start infinite;
+}
+
+/* Animation clignotement */
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 
 .intro{
   display: flex;
@@ -389,6 +418,17 @@ text-align: center;
 background: rgba(4, 244, 236, 0.9);
 border: 1px solid #031d55;
 color: #031d55;
+}
+
+.reveal{
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .skills{ 
@@ -769,7 +809,7 @@ gap:10px;
 }
 
 .logo{
-font-size:30px;
+font-size:35px;
 padding: 5px;
 }
 
@@ -808,7 +848,7 @@ display:block;
 /* HERO */
 .hero{
 flex-direction:column;
-padding:20px;
+padding:10px;
 margin:10px;
 gap:20px;
 width:95%;
@@ -839,24 +879,27 @@ flex-direction:column;
 gap: 20px;
 padding: 10px;
 margin: 20px ;
+width: 100%;
 /* text-align: justify; */
 }
 
 .apropo{
 gap:20px;
-padding:10px;
-margin: 20px auto;
+padding:20px;
+margin: 20px;
 border-left: 5px solid #07f9f9;
+width: 370px;
 }
 
 .apropo2{
 gap:5px;
 padding:10px;
-margin: 20px auto;
+margin: 20px;
+width: 100%;
 }
 
 .photos{
-width: 100%;
+width: 370px;
 border-top: 5px solid #07f9f9;
 border-left: 5px solid #07f9f9;
 border-right: 5px solid #07f9f9;
@@ -869,6 +912,14 @@ transform: none;
 box-shadow: none;
 }
 
+.Dev{
+font-size: 14px;
+border: 1px solid rgba(4, 244, 236, 0.9);
+border-radius: 5px;
+margin: 5px;
+padding: 5px;
+width: 370px;
+}
 
 /* SKILLS */
 .skills{
@@ -888,8 +939,8 @@ margin: 10px;}
 .skill{
 display: flex;
 flex-direction: column;
-width:400px;
-height: 400px;
+width: 370px;
+/* height: 200px; */
 padding: 1px;
 margin: 10px;
 font-size: 16px;
@@ -908,14 +959,14 @@ padding:10px;
 }
 
 .carte{
-width:100%;
+width:370px;
 margin:auto;
 
 }
 
 .carte p{
 font-size:16px;
-text-align: justify;
+/* text-align: justify; */
 }
 
 .carte img{
@@ -929,8 +980,8 @@ left:20px;
 }
 
 .container{
-width:330px;
-height: 370px;
+width:370px;
+/* height: 370px; */
 left:0 !important;
 padding-left:10px;
 margin:30px;
