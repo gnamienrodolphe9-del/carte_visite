@@ -954,7 +954,7 @@ width: 90%;
 max-width: 400px;
 /* padding: 10px; */
 margin: auto;
-font-size: 17px;
+/* font-size: 17px; */
 align-items: center;
 text-align: left;
 }
@@ -995,7 +995,7 @@ margin: 0 auto;
 }
 
 .carte p{
-font-size:17px;
+/* font-size:17px; */
 text-align: left; 
 margin: 20px;
 
