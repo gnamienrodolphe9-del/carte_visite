@@ -949,19 +949,21 @@ gap: 20px;
 
 .skill{
 /* display: flex; */
-/* flex-direction: column; */
+
 width: 90%;
 max-width: 400px;
 /* padding: 10px; */
 margin: auto;
-font-size: 16px;
+font-size: 17px;
 align-items: center;
-align-items: self-end;
+text-align: left;
 }
+
 
 .skill h2{
 font-size: 20px;
 margin: 10px ;
+text-align: left;
 }
 
 .lang{
@@ -993,8 +995,14 @@ margin: 0 auto;
 }
 
 .carte p{
-font-size:16px;
-/* text-align: justify; */
+font-size:17px;
+text-align: left; 
+margin: 20px;
+
+}
+
+.carte h3{
+  font-size: 22px;
 }
 
 .carte img{
