@@ -320,7 +320,7 @@ border: 20px;
 }
 
 .titre{
-font-size: 40px;
+font-size: clamp(1.8rem, 4vw, 2.6rem);
 text-align: center;
 margin: 10px;
 }
@@ -514,28 +514,24 @@ color: white;
 /*Mes projets*/
 
 .projets{
-display:flex; 
+/* display:flex;  */
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 28px;
+padding: 80px 5%;
 justify-content: center;
 gap:20px;
-max-width: 400px;
+max-width: 1200px;
 margin:auto;
-
-
-
 }
 
+/* .reveal{
+
+} */
+
 .carte{
-/*padding:20px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
-background: rgba(253, 253, 254, 0.046); 
-border: 1px solid rgba(255, 255, 255, 0.5); 
-backdrop-filter: blur(20px);
-box-shadow: 0 0 20px rgba(9, 9, 99, 0.9);
-width: 100%;
- border-left: 5px solid #07f9f9;* */
- text-align: center;
+
+text-align: center;
 background: var(--card);
 margin: 2px;
 border-radius:10px;
@@ -793,6 +789,19 @@ text-align:center;
 align-items: center;
 padding:20px;
 margin-top:40px;
+}
+
+
+
+@media ( max-width: 900px){
+    .projets{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media ( max-width: 500px){
+    .projets{
+        grid-template-columns: 1fr;
+    }
 }
 
 
