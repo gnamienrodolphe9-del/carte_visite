@@ -99,7 +99,7 @@ const texts = [
     
 ];
 
-let index = 0;   // Index du texte actuel mmot actuel dans le tableau
+let index = 0;   // Index du texte actuel mot actuel dans le tableau
 let charIndex = 0;   // Index du caractère actuel position actuel dans le texte
 let isDeleting = false;
  
